@@ -1,10 +1,14 @@
 # ezscript
 ## Description
-A small python script to help manage scripts. It uses a `/home/$USER/bin` directory to store user-written scripts (you can change it you like). It also uses VS Code as an editor (you can also change that). 
+A small python script to help manage scripts. It uses a `/home/$USER/bin` directory to store user-written scripts (you can change it if you like, the instruction is in the end of the `Usage` category). It also uses VS Code as a default editor for scripts (you can also change that). 
 
 ## Installation
-
-
+To install the script, you just copy the file `ezscript.py` into any of your `bin` directories. I prefer keeping my personal scripts in the `/home/$USER/bin` directory. To install it like I do, go to your terminal and use these commands: 
+```
+mkdir ~/bin
+wget -O ~/bin/ezscript https://raw.githubusercontent.com/golovingreg/ezscript/master/ezscript.py
+chmod 755 ~/bin/ezscript
+```
 ## Usage
 To use the program, type `ezscript` into your terminal and pass some options.
 ******
@@ -21,4 +25,4 @@ You can change default script directory on `line 11`.
 You can change code editor on `line 40`.
 
 ## About 
-It's my very first useful python script, so I hope to see some friendly advise!
+It's my very first python script that I find helpful, so I'll be glad to hear some friendly advise!
