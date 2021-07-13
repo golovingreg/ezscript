@@ -8,7 +8,7 @@ import subprocess
 user = os.environ['USER']
 
 # Change your script directory here
-bin_dir = f'/home/{user}/bin'
+bin_dir = f'{os.environ['HOME']}/bin'
 
 
 def create_script(name: str, type='default'):
@@ -24,7 +24,7 @@ def create_script(name: str, type='default'):
     elif type == 'python':
         new_script.write('#!/usr/bin/env python3')
     else:
-        new_script.write('#! <- enter your interpreter here')
+        new_script.write('#!')
 
     new_script.close()
     os.chmod(f'{bin_dir}/{name}', 0o755)
@@ -78,7 +78,6 @@ if args['n'] != None:
 if not args['on'] and not args['o'] and args['n'] == None:
     print(
         f'''Hello, {user}! Here's a script that helps you generate and manage scripts.''')
-    print('''This program creates a 'bin' directory in your user home folder, so that it's easier for you to manage your scripts.''')
     print('To use the program, type `ezscript` and pass some options.')
     print('******')
     print('Available options:')
