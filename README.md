@@ -11,8 +11,13 @@ mkdir $HOME/bin
 ```
 Add it to your $PATH (change `.zshrc` to your shell config file):
 ```
-echo PATH=$PATH:$HOME/bin >> $HOME/.zshrc
-source $HOME/.zshrc
+echo 'if [ -d "$HOME/bin" ] ; then' >> $HOME/.zshrc
+echo ' PATH="$HOME/bin:$PATH"' >> $HOME/.zshrc
+echo 'fi' >> $HOME/.zshrc
+
+
+# echo PATH=$PATH:$HOME/bin >> $HOME/.zshrc
+# source $HOME/.zshrc
 ```
 Download the script (either `curl` or `wget`):
 ```
