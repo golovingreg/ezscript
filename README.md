@@ -1,14 +1,32 @@
 # ezscript
 ## Description
-A small python script to help manage scripts. It uses a `/home/$USER/bin` directory to store user-written scripts (you can change it if you like, the instruction is in the end of the `Usage` category). It also uses VS Code as a default editor for scripts (you can also change that). 
+A small python script to help manage scripts. It uses a `$HOME/bin` directory to store user-written scripts (you can change it if you like, the instruction is in the end of the `Usage` category). It also uses VS Code as a default editor for scripts (you can also change that). 
 
 ## Installation
-To install the script, you just copy the file `ezscript.py` into any of your `bin` directories (and rename it to `ezscript` if you like). I prefer keeping my personal scripts in the `/home/$USER/bin` directory. To install it like I do, go to your terminal and use these commands: 
+To install the script, you just copy the file `ezscript.py` into any of your `bin` directories (and rename it to `ezscript` if you like). I prefer keeping my personal scripts in the `$HOME/bin` directory. To install it like I do, go to your terminal and use these commands: 
+
+Create a new directory:
 ```
-mkdir ~/bin
-wget -O ~/bin/ezscript https://raw.githubusercontent.com/golovingreg/ezscript/master/ezscript.py
-chmod 755 ~/bin/ezscript
+mkdir $HOME/bin
 ```
+Add it to your $PATH (change `.zshrc` to your shell config file):
+```
+echo PATH=$PATH:$HOME/bin >> $HOME/.zshrc
+source $HOME/.zshrc
+```
+Download the script (either `curl` or `wget`):
+```
+wget -O $HOME/bin/ezscript https://raw.githubusercontent.com/golovingreg/ezscript/master/ezscript.py
+```
+or:
+```
+curl -o $HOME/bin/ezscript https://raw.githubusercontent.com/golovingreg/ezscript/master/ezscript.py
+```
+Give it necessary permissions:
+```
+chmod 755 $HOME/bin/ezscript
+```
+
 ## Usage
 To use the program, type `ezscript` into your terminal and pass some options.
 ******
