@@ -6,9 +6,10 @@ import argparse
 import subprocess
 
 user = os.environ['USER']
+home = os.environ['HOME']
 
 # Change your script directory here
-bin_dir = f'{os.environ['HOME']}/bin'
+bin_dir = f'{home}/bin'
 
 
 def create_script(name: str, type='default'):
